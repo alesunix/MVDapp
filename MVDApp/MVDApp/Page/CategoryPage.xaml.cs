@@ -35,17 +35,6 @@ namespace MVDApp.Page
                 buttons[i].IsVisible = false;
             }
             //Инициализируем кнопки
-            Button1 = new Button
-            {
-                BackgroundColor = Color.IndianRed,
-                TextColor = Color.White,
-                BorderWidth = 1,
-                BorderColor = Color.SlateGray,
-                CornerRadius = 5,
-                HorizontalOptions = LayoutOptions.Fill,
-                Text = "Сохранить",
-                IsVisible = true,
-        };
             Button2 = new Button
             {
                 BackgroundColor = Color.SteelBlue,
