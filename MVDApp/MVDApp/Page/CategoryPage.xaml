@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVDApp.Page.CategoryPage"
+             Title="Категории населения">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid ColumnSpacing="2" RowSpacing="0" BackgroundColor="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ListView x:Name="List" BackgroundColor="LightGray" RowHeight="50" ItemsSource="{Binding Categoryes}" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Padding="0,0,0,0">
+                                            <Label Text="{Binding Title}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="Default" Margin="-1"/>
+                                        </StackLayout>
+                                        <!--<Switch IsToggled="{Binding Selected}" Toggled="OnToggled" Grid.Column="1" />-->
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Grid x:Name="Grid3" RowSpacing="1" Grid.Column="1" BackgroundColor="LightGray" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Switch x:Name="switch1" Grid.Row="0" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch2" Grid.Row="1" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch3" Grid.Row="2" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch4" Grid.Row="3" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch5"  Grid.Row="4" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch6"  Grid.Row="5" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch7"  Grid.Row="6" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch8"  Grid.Row="7" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch9"  Grid.Row="8" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch10"  Grid.Row="9" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch11"  Grid.Row="10" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch12"  Grid.Row="11" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch13"  Grid.Row="12" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch14"  Grid.Row="13" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch15"  Grid.Row="14" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch16" Grid.Row="15" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch17" Grid.Row="16" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch18"  Grid.Row="17" Toggled="OnToggled"></Switch>
+                    <Switch x:Name="switch19"  Grid.Row="18" Toggled="OnToggled"></Switch>
+                    </Grid>
+
+                    <Grid x:Name="Grid2" Grid.Column="2" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Button x:Name="Button21" Grid.Row="0"  Text="Место рождения" Clicked="Birthplace_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"  ></Button>
+                        <Button x:Name="Button22" Grid.Row="1"  Text="Место жительства" Clicked="Dwellingplace_Clicked" HorizontalOptions="Fill" IsVisible="False"  BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button23" Grid.Row="2"  Text="Место работы или учебы" Clicked="Job_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button24" Grid.Row="3"  Text="Степень родства" Clicked="Degree_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button25" Grid.Row="4"  Text="Сельскохозяйственные, домашние животные" Clicked="Pets_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button26" Grid.Row="5"  Text="Наличие автомототранспорта" Clicked="Avtotransport_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button27" Grid.Row="6"  Text="ФИО владельца автотранспорта" Clicked="NameAvtotransport_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button28" Grid.Row="7"  Text="Мобильный телефон" Clicked="Mobile_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button29" Grid.Row="8"  Text="Примечание" Clicked="Notes_Clicked" HorizontalOptions="Fill" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+
+                        <Button x:Name="Button35" Grid.Row="0" Grid.Column="1" Text="Личный кабинет" Clicked="Home_Clicked" IsEnabled="True" WidthRequest="250" TextColor="White" BackgroundColor="SteelBlue" BorderColor="SlateGray" BorderWidth="2" CornerRadius="10"></Button>
+                        <Button x:Name="Button36" Grid.Row="1" Grid.Column="1" Text="Контрольная карточка" Clicked="Card_Clicked" IsEnabled="True" WidthRequest="250" TextColor="White" BackgroundColor="IndianRed" BorderColor="SlateGray" BorderWidth="2" CornerRadius="10"></Button>
+
+                        <Button x:Name="Button30" Grid.Row="2" Grid.Column="1" Text="Оружие" Clicked="Weapon_Clicked" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button31" Grid.Row="3" Grid.Column="1" Text="ОВД, выдавший удостоверение внештатному помощнику милиции" Clicked="IssuingCertificate_Clicked" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button32" Grid.Row="4" Grid.Column="1" Text="Правонарушение" Clicked="Offense_Clicked" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button33" Grid.Row="5" Grid.Column="1" Text="Наличие судимости" Clicked="CriminalRecord_Clicked" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+                        <Button x:Name="Button34" Grid.Row="6" Grid.Column="1" Text="Дата учета" Clicked="AccountingDate_Clicked" IsVisible="False" BorderColor="LightGray" BorderWidth="2" CornerRadius="5" Margin="-1"></Button>
+
+
+
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

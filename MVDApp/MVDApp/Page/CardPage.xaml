@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVDApp.CardPage"
+             Title="Контрольная карточка">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <ListView x:Name="List" WidthRequest="350" BackgroundColor="LightCoral" HasUnevenRows="False" ItemsSource="{Binding Categoryes}" ItemTapped="OnItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout Padding="5,5,5,5">
+                                            <Label Text="{Binding Title}" TextColor="Black" FontSize="Default"/>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Grid x:Name="Grid1" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Padding="25,25,25,25" BackgroundColor="AntiqueWhite">
+                            <Label Text="Дата установления контроля"></Label>
+                            <DatePicker x:Name="DatePicker1" Grid.Row="0"  WidthRequest="250"  IsVisible="False"></DatePicker>
+                            <Label Text="Дата окончания контроля"></Label>
+                            <DatePicker x:Name="DatePicker2" Grid.Row="1"  WidthRequest="250"  IsVisible="False"></DatePicker>
+                            <Entry x:Name="Entry3" Grid.Row="2"  WidthRequest="250" Placeholder="СРОКИ"  IsVisible="False"></Entry>
+                            <Button x:Name="Button1" WidthRequest="250" Text="Сохранить" Clicked="Button1_Clicked"  IsVisible="False"></Button>
+                            <Button x:Name="Button2" Text="Личный кабинет" Clicked="Button2_Clicked" TextColor="White" BackgroundColor="SteelBlue" BorderColor="SlateGray" BorderWidth="2" CornerRadius="10" HorizontalOptions="Fill" IsEnabled="True"></Button>
+                        </StackLayout>
+                    </Grid>
+                    <Grid x:Name="Grid2" Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <!--<ListView x:Name="List2" HasUnevenRows="False" ItemsSource="{Binding CategoryesResult}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <StackLayout Padding="5,5,5,5">
+                                                <Label Text="{Binding ResultCard}" TextColor="Black" FontSize="Default"/>
+                                            </StackLayout>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>-->
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

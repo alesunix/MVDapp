@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MVDApp"
+             x:Class="MVDApp.MainPage"
+             Title="ГУВД МВД КР">
+    <ScrollView>
+        <StackLayout x:Name="StackLayout1" Padding="25,25,25,25" HorizontalOptions="StartAndExpand" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Image Source="https://www.ksla.kg/media/images/partner/2019-05-31-08-47-28/3e614936f0e74db8.png" Grid.Column="1" Grid.Row="0"></Image>
+            <!-- Авторизация -->
+            <Entry x:Name="Entry1" HorizontalOptions="Fill" WidthRequest="300" Placeholder="Логин" PlaceholderColor="Black" Grid.Column="1" Grid.Row="1"></Entry>
+            <Entry x:Name="Entry2" IsPassword="true" HorizontalOptions="Fill" WidthRequest="300" Placeholder="Пароль" PlaceholderColor="Black" Grid.Column="1" Grid.Row="2"></Entry>
+            <Button x:Name="Button2" Text="ВХОД" TextColor="White" FontSize="Large" Clicked="Button2_Click" HorizontalOptions="Center" WidthRequest="300" 
+                    Grid.Column="1" Grid.Row="3" BackgroundColor="IndianRed" BorderColor="SlateGray" BorderWidth="2" CornerRadius="10"></Button>
+            <!-- Авторизация -->
+        </Grid>
+
+    </StackLayout>
+        </ScrollView>
+</ContentPage>
